@@ -1,0 +1,785 @@
+body {
+  color: #fff;
+  background-color: #fff;
+  margin: 0;
+  font-family: Lato, sans-serif;
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    height: 66px;
+    background: linear-gradient(.25turn, #878b95, #424a53 5%, #424a53, #424a53 95%, #878b95);
+    display: flex;
+  }
+
+  header .logo {
+    padding-top: 10px;
+    padding-left: 97px;
+  }
+
+  header .navBar {
+    padding-top: 20px;
+    padding-left: 25px;
+    display: flex;
+  }
+
+  header .navBar li {
+    gap: 51px;
+    list-style-type: none;
+    display: flex;
+  }
+
+  header .navBar li a {
+    color: #b0a17c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  header button {
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 134px;
+    height: 28px;
+    cursor: pointer;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 12px;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 97px;
+    transform: translateY(50%);
+  }
+
+  a:hover {
+    color: #fff !important;
+  }
+
+  button:hover {
+    background-color: #fff;
+  }
+
+  .heroWrapper {
+    filter: contrast(150%);
+    height: 677px;
+    background: url("bg-image.034848fd.jpg") center / cover;
+    display: flex;
+  }
+
+  .heroWrapper .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #52525287;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .heroWrapper .overlay .heroTextBox {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 275px;
+    display: flex;
+  }
+
+  .heroWrapper .overlay .heroTextBox p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .heroWrapper .overlay .heroTextBox h2 {
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 15px;
+    font-family: bennet-banner, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .loginSection {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000086;
+    padding-top: 60px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  .loginContainer {
+    width: 341px;
+    height: 250px;
+    background-color: #e4e3ee;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% auto;
+    padding: 16px;
+    display: flex;
+  }
+
+  .loginContainer .closeLogin {
+    cursor: pointer;
+    height: 18px;
+    padding-left: 320px;
+  }
+
+  .login-modal {
+    width: 250px;
+    height: 180px;
+    flex-direction: column;
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .login-modal .loginText {
+    color: #4b4b4b;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+
+  .loginTextTerms {
+    text-align: center;
+    color: #4b4b4b;
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .loginTextTerms a {
+    color: #4b4b4b;
+  }
+
+  label {
+    color: #000;
+    letter-spacing: 0, 5px;
+    font-size: 21px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #0000;
+    border-radius: 6px;
+    margin: 11px 0;
+    padding: 10px 20px;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .loginBtn {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .loginBtn:hover {
+    color: #fff;
+    background-color: #533e83;
+  }
+
+  .animate {
+    animation: animatezoom .7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  header {
+    height: 66px;
+    background: linear-gradient(.25turn, #878b95, #424a53 5% 95%, #878b95);
+    display: flex;
+  }
+
+  header .logo {
+    padding-top: 10px;
+    padding-left: 87px;
+  }
+
+  header .hamburgerMenu {
+    cursor: pointer;
+    z-index: 500;
+    margin-right: 50px;
+    padding-top: 13px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  header .bar {
+    width: 25px;
+    height: 4px;
+    -webkit-transition-: all .3s ease-in-out;
+    z-index: 500;
+    background-color: #b0a17c;
+    margin: 5px auto;
+    display: block;
+  }
+
+  header a.nav-link:hover {
+    color: #fff;
+  }
+
+  header .navBar {
+    opacity: .99;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 200;
+    background: linear-gradient(.25turn, #424a53, #424a53, #878b95);
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    left: -105%;
+  }
+
+  header .navBar li {
+    text-align: left;
+    flex-direction: column;
+    gap: 51px;
+    padding-top: 80px;
+    padding-left: 120px;
+    list-style-type: none;
+    display: flex;
+  }
+
+  header .navBar li a {
+    color: #b0a17c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 45px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  header .navBtn {
+    margin: 16px 0;
+    padding: 20px;
+    list-style: none;
+  }
+
+  header .nav-link {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 40px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  header .navBar.active {
+    left: 0;
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(1) {
+    transform: translateY(9px)rotate(45deg);
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(3) {
+    transform: translateY(-9px)rotate(-45deg);
+  }
+
+  header button {
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 134px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 12px;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+    transform: translateY(50%);
+  }
+
+  .heroWrapper {
+    filter: contrast(150%);
+    height: 677px;
+    background: url("bg-image.034848fd.jpg") center / cover;
+    display: flex;
+  }
+
+  .heroWrapper .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #52525287;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .heroWrapper .overlay .heroTextBox {
+    text-align: center;
+    flex-direction: column;
+    padding-top: 265px;
+    display: flex;
+  }
+
+  .heroWrapper .overlay .heroTextBox p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .heroWrapper .overlay .heroTextBox h2 {
+    letter-spacing: 2px;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: bennet-banner, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .loginSection {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: #00000086;
+    padding-top: 60px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  .loginContainer {
+    width: 341px;
+    height: 250px;
+    background-color: #e4e3ee;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20% auto 15%;
+    padding: 16px;
+    display: flex;
+  }
+
+  .loginContainer .closeLogin {
+    cursor: pointer;
+    height: 18px;
+    padding-left: 320px;
+  }
+
+  .login-modal {
+    width: 250px;
+    height: 180px;
+    flex-direction: column;
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .login-modal .loginText {
+    color: #4b4b4b;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+
+  .loginTextTerms {
+    text-align: center;
+    color: #4b4b4b;
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .loginTextTerms a {
+    color: #4b4b4b;
+  }
+
+  label {
+    color: #000;
+    letter-spacing: 0, 5px;
+    font-size: 21px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #0000;
+    border-radius: 6px;
+    margin: 11px 0;
+    padding: 10px 20px;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .loginBtn {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .loginBtn:hover {
+    color: #fff;
+    background-color: #533e83;
+  }
+
+  .animate {
+    animation: animatezoom .7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    height: 66px;
+    background: linear-gradient(.25turn, #878b95, #424a53 5% 95%, #878b95);
+    display: flex;
+  }
+
+  header .logo {
+    padding-top: 10px;
+    padding-left: 87px;
+  }
+
+  header .hamburgerMenu {
+    cursor: pointer;
+    z-index: 500;
+    margin-right: 50px;
+    padding-top: 13px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
+  header .bar {
+    width: 25px;
+    height: 4px;
+    -webkit-transition-: all .3s ease-in-out;
+    z-index: 500;
+    background-color: #b0a17c;
+    margin: 5px auto;
+    display: block;
+  }
+
+  header a.nav-link:hover {
+    color: #fff;
+  }
+
+  header .navBar {
+    opacity: .99;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 200;
+    background: linear-gradient(.25turn, #424a53, #424a53, #878b95);
+    transition: all .5s;
+    position: fixed;
+    top: 0;
+    left: -105%;
+  }
+
+  header .navBar li {
+    text-align: left;
+    flex-direction: column;
+    gap: 51px;
+    padding-top: 60px;
+    padding-left: 60px;
+    list-style-type: none;
+    display: flex;
+  }
+
+  header .navBar li a {
+    color: #b0a17c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 40px;
+    font-weight: 300;
+    text-decoration: none;
+  }
+
+  header .navBtn {
+    margin: 16px 0;
+    padding: 20px;
+    list-style: none;
+  }
+
+  header .nav-link {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 40px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  header .navBar.active {
+    left: 0;
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(1) {
+    transform: translateY(9px)rotate(45deg);
+  }
+
+  header .hamburgerMenu.active .bar:nth-child(3) {
+    transform: translateY(-9px)rotate(-45deg);
+  }
+
+  header button {
+    color: #000;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    width: 134px;
+    height: 28px;
+    cursor: pointer;
+    z-index: 2;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 12px;
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+    transform: translateY(50%);
+  }
+
+  .heroWrapper {
+    filter: contrast(150%);
+    height: 677px;
+    background: url("bg-image.034848fd.jpg") center / cover;
+    display: flex;
+  }
+
+  .heroWrapper .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #52525287;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .heroWrapper .overlay .heroTextBox {
+    text-align: center;
+    flex-direction: column;
+    padding-top: 250px;
+    display: flex;
+  }
+
+  .heroWrapper .overlay .heroTextBox p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .heroWrapper .overlay .heroTextBox h2 {
+    letter-spacing: 2px;
+    margin-top: 5px;
+    padding: 10px;
+    font-family: bennet-banner, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .loginSection {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000086;
+    padding-top: 60px;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  .loginContainer {
+    width: 341px;
+    height: 250px;
+    background-color: #e4e3ee;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: 40% auto 15%;
+    padding: 16px;
+    display: flex;
+  }
+
+  .loginContainer .closeLogin {
+    cursor: pointer;
+    height: 18px;
+    padding-left: 320px;
+  }
+
+  .login-modal {
+    width: 250px;
+    height: 180px;
+    flex-direction: column;
+    padding-top: 10px;
+    display: flex;
+  }
+
+  .login-modal .loginText {
+    color: #4b4b4b;
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    font-size: 17px;
+  }
+
+  .loginTextTerms {
+    text-align: center;
+    color: #4b4b4b;
+    padding-bottom: 20px;
+    font-size: 10px;
+  }
+
+  .loginTextTerms a {
+    color: #4b4b4b;
+  }
+
+  label {
+    color: #000;
+    letter-spacing: 0, 5px;
+    font-size: 21px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #0000;
+    border-radius: 6px;
+    margin: 11px 0;
+    padding: 10px 20px;
+    font-size: 15px;
+    display: inline-block;
+  }
+
+  .loginBtn {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+  }
+
+  .loginBtn:hover {
+    color: #fff;
+    background-color: #533e83;
+  }
+
+  .animate {
+    animation: animatezoom .7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+}
+
+/*# sourceMappingURL=index.e8265c92.css.map */

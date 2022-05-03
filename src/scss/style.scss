@@ -1,0 +1,782 @@
+body {
+  background-color: white;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  //--------------HEADER STARTS HERE-------------------------->
+  header {
+    background: linear-gradient(
+      0.25turn,
+      #878b95,
+      #424a53 5%,
+      #424a53,
+      #424a53 95%,
+      #878b95
+    );
+    height: 66px;
+    display: flex;
+    .logo {
+      padding-left: 97px;
+      padding-top: 10px;
+    }
+    .navBar {
+      display: flex;
+      padding-top: 20px;
+      padding-left: 25px;
+      li {
+        display: flex;
+        gap: 51px;
+        list-style-type: none;
+        a {
+          text-decoration: none;
+          color: #b0a17c;
+          font-size: 15px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+    }
+
+    button {
+      background-color: #b0a17c;
+      border: none;
+      border-radius: 12px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: "Lato", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 134px;
+      height: 28px;
+      transform: translateY(50%);
+      position: absolute;
+      right: 97px;
+      cursor: pointer;
+    }
+  }
+  a:hover {
+    color: rgb(255, 255, 255) !important;
+  }
+  button:hover {
+    background-color: white;
+  }
+  //--------------HEADER ENDS HERE-------------------------->
+
+  //--------------MAIN STARTS HERE-------------------------->
+
+  .heroWrapper {
+    display: flex;
+    background: url("../assets/bg-image.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: contrast(150%);
+    height: 677px;
+    .overlay {
+      background-color: rgba(82, 82, 82, 0.53);
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .heroTextBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 275px;
+
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 300;
+        }
+        h2 {
+          margin-top: 15px;
+          font-family: bennet-banner, sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          font-size: 48px;
+          letter-spacing: 2px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  //--------------MAIN ENDS HERE-------------------------->
+  //--------------MODAL STARTS HERE----------------------->
+
+  .loginSection {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.527);
+    padding-top: 60px;
+  }
+
+  .loginContainer {
+    background-color: #e4e3ee;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% auto 15% auto;
+    width: 341px;
+    height: 250px;
+    .closeLogin {
+      cursor: pointer;
+      padding-left: 320px;
+      height: 18px;
+    }
+  }
+  .login-modal {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 250px;
+    height: 180px;
+    .loginText {
+      margin: 0;
+      padding-top: 8px;
+      color: #4b4b4b;
+      font-size: 17px;
+      padding-bottom: 10px;
+    }
+  }
+  .loginTextTerms {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #4b4b4b;
+    a {
+      color: #4b4b4b;
+    }
+  }
+
+  label {
+    color: black;
+    font-size: 21px;
+    letter-spacing: 0, 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 11px 0;
+    display: inline-block;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .loginBtn {
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .loginBtn:hover {
+    color: white;
+    background-color: #533e83;
+  }
+
+  .animate {
+    -webkit-animation: animatezoom 0.7s;
+    animation: animatezoom 0.7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  //--------------MODAL ENDS HERE------------------------->
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  //--------------HEADER STARTS HERE--------------------------
+  header {
+    background: linear-gradient(
+      0.25turn,
+      #878b95,
+      #424a53 5%,
+      #424a53 95%,
+      #878b95
+    );
+    height: 66px;
+    display: flex;
+    .logo {
+      padding-left: 87px;
+      padding-top: 10px;
+    }
+    .hamburgerMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: block;
+      cursor: pointer;
+      margin-right: 50px;
+      padding-top: 13px;
+      z-index: 500;
+    }
+    .bar {
+      display: block;
+      width: 25px;
+      height: 4px;
+      margin: 5px auto;
+      -webkit-transition-: all 0.3s ease-in-out;
+      background-color: #b0a17c;
+      z-index: 500;
+    }
+
+    a.nav-link:hover {
+      color: white;
+    }
+    .navBar {
+      position: fixed;
+      left: -105%;
+      top: 0;
+      background: linear-gradient(0.25turn, #424a53, #424a53, #878b95);
+      opacity: 99%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: 0.5s;
+      z-index: 200;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+        list-style-type: none;
+        padding-top: 80px;
+        text-align: left;
+        padding-left: 120px;
+        a {
+          text-decoration: none;
+          color: #b0a17c;
+          font-size: 45px;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .navBtn {
+      padding: 20px;
+      list-style: none;
+      margin: 16px 0;
+    }
+    .nav-link {
+      font-weight: 400;
+      font-size: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .navBar.active {
+      left: 0;
+    }
+    .hamburgerMenu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburgerMenu.active .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .hamburgerMenu.active .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    button {
+      background-color: #b0a17c;
+      border: none;
+      border-radius: 12px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: "Lato", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 134px;
+      height: 28px;
+      transform: translateY(50%);
+      position: absolute;
+      right: 100px;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  //--------------HEADER ENDS HERE-------------------------->
+
+  //--------------MAIN STARTS HERE-------------------------->
+  .heroWrapper {
+    display: flex;
+    background: url("../assets/bg-image.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: contrast(150%);
+    height: 677px;
+    .overlay {
+      background-color: rgba(82, 82, 82, 0.53);
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .heroTextBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 265px;
+
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 300;
+        }
+        h2 {
+          margin-top: 5px;
+          font-family: bennet-banner, sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          font-size: 48px;
+          letter-spacing: 2px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  //--------------MAIN ENDS HERE-------------------------->
+
+  //-------------MODAL STARTS HERE------------------------>
+
+  .loginSection {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.527);
+    padding-top: 60px;
+  }
+
+  .loginContainer {
+    background-color: #e4e3ee;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20% auto 15% auto;
+    width: 341px;
+    height: 250px;
+    .closeLogin {
+      cursor: pointer;
+      padding-left: 320px;
+      height: 18px;
+    }
+  }
+  .login-modal {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 250px;
+    height: 180px;
+    .loginText {
+      margin: 0;
+      padding-top: 8px;
+      color: #4b4b4b;
+      font-size: 17px;
+      padding-bottom: 10px;
+    }
+  }
+  .loginTextTerms {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #4b4b4b;
+    a {
+      color: #4b4b4b;
+    }
+  }
+
+  label {
+    color: black;
+    font-size: 21px;
+    letter-spacing: 0, 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 11px 0;
+    display: inline-block;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .loginBtn {
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .loginBtn:hover {
+    color: white;
+    background-color: #533e83;
+  }
+
+  .animate {
+    -webkit-animation: animatezoom 0.7s;
+    animation: animatezoom 0.7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  //-------------MODAL ENDS HERE------------------------>
+}
+
+@media only screen and (max-width: 600px) {
+  //--------------HEADER STARTS HERE-------------------------->
+  header {
+    background: linear-gradient(
+      0.25turn,
+      #878b95,
+      #424a53 5%,
+      #424a53 95%,
+      #878b95
+    );
+    height: 66px;
+    display: flex;
+    .logo {
+      padding-left: 87px;
+      padding-top: 10px;
+    }
+    .hamburgerMenu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      display: block;
+      cursor: pointer;
+      margin-right: 50px;
+      padding-top: 13px;
+      z-index: 500;
+    }
+    .bar {
+      display: block;
+      width: 25px;
+      height: 4px;
+      margin: 5px auto;
+      -webkit-transition-: all 0.3s ease-in-out;
+      background-color: #b0a17c;
+      z-index: 500;
+    }
+
+    a.nav-link:hover {
+      color: white;
+    }
+    .navBar {
+      position: fixed;
+      left: -105%;
+      top: 0;
+      background: linear-gradient(0.25turn, #424a53, #424a53, #878b95);
+      opacity: 99%;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: 0.5s;
+      z-index: 200;
+
+      li {
+        display: flex;
+        flex-direction: column;
+        gap: 51px;
+        list-style-type: none;
+        padding-top: 60px;
+        text-align: left;
+        padding-left: 60px;
+        a {
+          text-decoration: none;
+          color: #b0a17c;
+          font-size: 40px;
+          text-transform: uppercase;
+          font-weight: 300;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .navBtn {
+      padding: 20px;
+      list-style: none;
+      margin: 16px 0;
+    }
+    .nav-link {
+      font-weight: 400;
+      font-size: 40px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+    }
+
+    .navBar.active {
+      left: 0;
+    }
+    .hamburgerMenu.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburgerMenu.active .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+    .hamburgerMenu.active .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    button {
+      background-color: #b0a17c;
+      border: none;
+      border-radius: 12px;
+      color: black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-family: "Lato", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      width: 134px;
+      height: 28px;
+      transform: translateY(50%);
+      position: absolute;
+      right: 100px;
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+  //--------------HEADER ENDS HERE-------------------------->
+
+  //--------------MAIN STARTS HERE-------------------------->
+  .heroWrapper {
+    display: flex;
+    background: url("../assets/bg-image.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: contrast(150%);
+    height: 677px;
+    .overlay {
+      background-color: rgba(82, 82, 82, 0.53);
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      .heroTextBox {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 250px;
+
+        p {
+          margin: 0;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-weight: 300;
+        }
+        h2 {
+          margin-top: 5px;
+          font-family: bennet-banner, sans-serif;
+          font-weight: 700;
+          font-style: normal;
+          font-size: 48px;
+          letter-spacing: 2px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  //--------------MAIN ENDS HERE-------------------------->
+
+  //--------------MODAL STARTS HERE----------------------->
+
+  .loginSection {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.527);
+    padding-top: 60px;
+  }
+
+  .loginContainer {
+    background-color: #e4e3ee;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40% auto 15% auto;
+    width: 341px;
+    height: 250px;
+    .closeLogin {
+      cursor: pointer;
+      padding-left: 320px;
+      height: 18px;
+    }
+  }
+  .login-modal {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    width: 250px;
+    height: 180px;
+    .loginText {
+      margin: 0;
+      padding-top: 8px;
+      color: #4b4b4b;
+      font-size: 17px;
+      padding-bottom: 10px;
+    }
+  }
+  .loginTextTerms {
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 10px;
+    color: #4b4b4b;
+    a {
+      color: #4b4b4b;
+    }
+  }
+
+  label {
+    color: black;
+    font-size: 21px;
+    letter-spacing: 0, 5px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 11px 0;
+    display: inline-block;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+
+  .loginBtn {
+    background-color: #b0a17c;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .loginBtn:hover {
+    color: white;
+    background-color: #533e83;
+  }
+
+  .animate {
+    -webkit-animation: animatezoom 0.7s;
+    animation: animatezoom 0.7s;
+  }
+
+  @-webkit-keyframes animatezoom {
+    from {
+      -webkit-transform: scale(0);
+    }
+    to {
+      -webkit-transform: scale(1);
+    }
+  }
+
+  @keyframes animatezoom {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  //--------------MODAL ENDS HERE------------------------->
+}
