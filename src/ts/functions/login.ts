@@ -18,9 +18,21 @@ export function loginModal() {
   }
   function handleChange(e) {
     let inputValue: HTMLParagraphElement = document.getElementById(
+      "userInput"
+    ) as HTMLParagraphElement;
+    let userInputValue = JSON.stringify(e.target.value);
+    window.localStorage.setItem("loginName", userInputValue);
+
+    document.getElementById("theLoginButton").onclick = handleLogin;
+  }
+
+  function handleLogin() {
+    let inputData = window.localStorage.getItem("loginName");
+    console.log(inputData);
+    let inputText: HTMLParagraphElement = document.getElementById(
       "valueInput"
     ) as HTMLParagraphElement;
-    inputValue.innerHTML = e.target.value;
+    inputText.innerHTML = inputData;
   }
 
   function closeClick() {

@@ -599,8 +599,16 @@ function loginModal() {
         document.getElementById("userInput").addEventListener("keyup", handleChange);
     }
     function handleChange(e) {
-        let inputValue = document.getElementById("valueInput");
-        inputValue.innerHTML = e.target.value;
+        let inputValue = document.getElementById("userInput");
+        let userInputValue = JSON.stringify(e.target.value);
+        window.localStorage.setItem("loginName", userInputValue);
+        document.getElementById("theLoginButton").onclick = handleLogin;
+    }
+    function handleLogin() {
+        let inputData = window.localStorage.getItem("loginName");
+        console.log(inputData);
+        let inputText = document.getElementById("valueInput");
+        inputText.innerHTML = inputData;
     }
     function closeClick() {
         modal.style.display = "none";
