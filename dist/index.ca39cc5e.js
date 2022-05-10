@@ -601,16 +601,21 @@ function loginModal() {
         document.getElementById("userInput").addEventListener("keyup", handleChange);
     }
     function handleChange(e) {
-        let inputValue = document.getElementById("userInput");
-        let userInputValue = JSON.stringify(e.target.value);
-        window.localStorage.setItem("loginName", userInputValue);
+        let inputValue = JSON.stringify(e.target.value);
+        localStorage.setItem("loginName", inputValue);
     }
     function handleLogin() {
-        let inputData = window.localStorage.getItem("loginName");
+        let youArelogin = document.getElementById("loggedInDiv");
+        let loggedInText = document.createElement("p");
+        let textLoggedIn = document.createTextNode("Du är inloggad som");
+        loggedInText.appendChild(textLoggedIn);
+        youArelogin.appendChild(loggedInText);
+        let inputData = localStorage.getItem("loginName");
         console.log(inputData);
         let inputText = document.getElementById("valueInput");
         inputText.innerHTML = inputData;
-        document.getElementById("theLoginButton").onclick = function() {};
+        modal.style.display = "none";
+        button.innerHTML = "Logga ut";
     }
     function closeClick() {
         modal.style.display = "none";

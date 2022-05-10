@@ -19,22 +19,30 @@ export function loginModal() {
       .addEventListener("keyup", handleChange);
   }
   function handleChange(e) {
-    let inputValue: HTMLParagraphElement = document.getElementById(
-      "userInput"
-    ) as HTMLParagraphElement;
-    let userInputValue = JSON.stringify(e.target.value);
-    window.localStorage.setItem("loginName", userInputValue);
+    let inputValue = JSON.stringify(e.target.value);
+    localStorage.setItem("loginName", inputValue);
   }
 
   function handleLogin() {
-    let inputData = window.localStorage.getItem("loginName");
+    let youArelogin: HTMLDivElement = document.getElementById(
+      "loggedInDiv"
+    ) as HTMLDivElement;
+
+    let loggedInText = document.createElement("p");
+    let textLoggedIn = document.createTextNode("Du är inloggad som");
+    loggedInText.appendChild(textLoggedIn);
+    youArelogin.appendChild(loggedInText);
+
+    let inputData = localStorage.getItem("loginName");
     console.log(inputData);
     let inputText: HTMLParagraphElement = document.getElementById(
       "valueInput"
     ) as HTMLParagraphElement;
+
     inputText.innerHTML = inputData;
 
-    document.getElementById("theLoginButton").onclick = function () {};
+    modal.style.display = "none";
+    button.innerHTML = "Logga ut";
   }
 
   function closeClick() {
