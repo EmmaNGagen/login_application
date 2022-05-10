@@ -592,8 +592,10 @@ function loginModal() {
     let modal = document.getElementById("theLogin");
     let button = document.getElementById("loginBtn");
     let close = document.getElementById("closeBtn");
+    let theLoginButton = document.getElementById("theLoginButton");
     button.addEventListener("click", handleClick);
     close.addEventListener("click", closeClick);
+    theLoginButton.addEventListener("click", handleLogin);
     function handleClick() {
         modal.style.display = "block";
         document.getElementById("userInput").addEventListener("keyup", handleChange);
@@ -602,13 +604,13 @@ function loginModal() {
         let inputValue = document.getElementById("userInput");
         let userInputValue = JSON.stringify(e.target.value);
         window.localStorage.setItem("loginName", userInputValue);
-        document.getElementById("theLoginButton").onclick = handleLogin;
     }
     function handleLogin() {
         let inputData = window.localStorage.getItem("loginName");
         console.log(inputData);
         let inputText = document.getElementById("valueInput");
         inputText.innerHTML = inputData;
+        document.getElementById("theLoginButton").onclick = function() {};
     }
     function closeClick() {
         modal.style.display = "none";

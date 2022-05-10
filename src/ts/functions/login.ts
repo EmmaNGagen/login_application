@@ -6,9 +6,11 @@ export function loginModal() {
   let close: HTMLImageElement = document.getElementById(
     "closeBtn"
   ) as HTMLImageElement;
+  let theLoginButton = document.getElementById("theLoginButton");
 
   button.addEventListener("click", handleClick);
   close.addEventListener("click", closeClick);
+  theLoginButton.addEventListener("click", handleLogin);
 
   function handleClick() {
     modal.style.display = "block";
@@ -22,8 +24,6 @@ export function loginModal() {
     ) as HTMLParagraphElement;
     let userInputValue = JSON.stringify(e.target.value);
     window.localStorage.setItem("loginName", userInputValue);
-
-    document.getElementById("theLoginButton").onclick = handleLogin;
   }
 
   function handleLogin() {
@@ -33,6 +33,8 @@ export function loginModal() {
       "valueInput"
     ) as HTMLParagraphElement;
     inputText.innerHTML = inputData;
+
+    document.getElementById("theLoginButton").onclick = function () {};
   }
 
   function closeClick() {
