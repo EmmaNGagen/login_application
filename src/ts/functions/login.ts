@@ -24,22 +24,13 @@ export function loginModal() {
   }
 
   function handleLogin() {
-    let youArelogin: HTMLDivElement = document.getElementById(
-      "loggedInDiv"
-    ) as HTMLDivElement;
-
-    let loggedInText = document.createElement("p");
-    let textLoggedIn = document.createTextNode("Du är inloggad som");
-    loggedInText.appendChild(textLoggedIn);
-    youArelogin.appendChild(loggedInText);
-
     let inputData = localStorage.getItem("loginName");
     console.log(inputData);
     let inputText: HTMLParagraphElement = document.getElementById(
       "valueInput"
     ) as HTMLParagraphElement;
 
-    inputText.innerHTML = inputData;
+    inputText.innerHTML = "Du är inloggad som " + inputData;
 
     modal.style.display = "none";
     button.innerHTML = "Logga ut";

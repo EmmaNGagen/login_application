@@ -59,8 +59,6 @@ body {
       cursor: pointer;
     }
   }
-  .loggedInDiv {
-  }
 
   a:hover {
     color: rgb(255, 255, 255) !important;
@@ -68,6 +66,11 @@ body {
   button:hover {
     background-color: white;
   }
+
+  .valueInput {
+    padding-left: 200px; //fungerar ej?
+  }
+
   //--------------HEADER ENDS HERE-------------------------->
 
   //--------------MAIN STARTS HERE-------------------------->

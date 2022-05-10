@@ -64,6 +64,10 @@ body {
     background-color: #fff;
   }
 
+  .valueInput {
+    padding-left: 200px;
+  }
+
   .heroWrapper {
     filter: contrast(150%);
     height: 677px;
